@@ -12,7 +12,7 @@ env:
   - USER="ndip007"
   - EMAIL="owenhojunior@gmail.com"
   - REPO="py_project"
-  - FILES="README.md py_project-build-tool-rdf.spdx py_project-build-tool-tv.spdx"
+  - FILES="README.md npm_project-build-tool-rdf.spdx npm_project-build-tool-tv.spdx"
   - GH_REPO="github.com/${USER}/${REPO}.git"
   
 install:
