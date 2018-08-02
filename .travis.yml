@@ -1,0 +1,14 @@
+sudo: false
+
+language: python
+
+python:
+  - 3.6.0
+
+cache: pip
+
+install:
+  - pip install -e git+https://github.com/ndip007/spdx-build-tool#egg=spdx-build-tool
+
+script:
+  - spdx-build $TRAVIS_BUILD_DIR
