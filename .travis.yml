@@ -22,12 +22,13 @@ script:
   - spdx-build $TRAVIS_BUILD_DIR
  
 after_success:
-  - git clone https://github.com/ndip007/py_project.git
-  - mv -f "README.md npm_project-build-tool-rdf.spdx npm_project-build-tool-tv.spdx" "py_project"
-  - cd py_project
+  - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
+  - git clone https://${GH_REPO}
+  - mv -f ${FILES} ${REPO}
+  - cd ${REPO}
   - git remote
-  - git config user.email "owenhojunior@gmail.com"
-  - git config user.name "ndip007"
-  - git add "README.md npm_project-build-tool-rdf.spdx npm_project-build-tool-tv.spdx"
-  - git commit -m "commit spdx iles"
-  - git push "https://$TRAVIS_SECURE_TOKEN_NAME@github.com/ndip007/py_project.git" master > /dev/null 2>&1
+  - git config user.email ${EMAIL}
+  - git config user.name ${USER}
+  - git add ${FILES}
+  - git commit -m ${MESSAGE}
+  - git push "https://${TRAVIS_SECURE_TOKEN_NAME}@${GH_REPO}" master > /dev/null 2>&1
