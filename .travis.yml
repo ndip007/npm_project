@@ -9,8 +9,8 @@ cache: pip
 
 env:
   global:
-  - USER="ndip007"
-  - EMAIL="owenhojunior@gmail.com"
+  - USER="Travis CI"
+  - EMAIL="travis@travis-ci.org"
   - REPO="py_project"
   - FILES="README.md npm_project-build-tool-rdf.spdx npm_project-build-tool-tv.spdx"
   - GH_REPO="github.com/${USER}/${REPO}.git"
